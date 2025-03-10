@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputManager: {fileID: 1623929139}
-  maxSpeed: 10
+  maxSpeed: 25
   acceleration: 35
   jumpForce: 10
   dashForce: 40
@@ -1534,7 +1534,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 049a4ccb0e488464093d4ac2d11bda84, type: 3}
+  m_Sprite: {fileID: 2047857569, guid: 049a4ccb0e488464093d4ac2d11bda84, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1754,7 +1754,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &832575518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2107,6 +2107,7 @@ GameObject:
   - component: {fileID: 1165002140}
   - component: {fileID: 1165002139}
   - component: {fileID: 1165002138}
+  - component: {fileID: 1165002142}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2197,6 +2198,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1165002142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165002137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d3a4cb54c9f604d93b0072bb5cb172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current: {fileID: 1621767116}
+  toUpdate: {fileID: 1356052255}
+  coinTextContainer: {fileID: 806430190}
+  duration: 0.4
+  animationCurve: 29
 --- !u!1001 &1299876373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2343,8 +2361,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 76
-  m_fontSizeBase: 76
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2643,8 +2661,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 76
-  m_fontSizeBase: 76
+  m_fontSize: 80
+  m_fontSizeBase: 80
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2863,6 +2881,7 @@ GameObject:
   - component: {fileID: 1623929138}
   - component: {fileID: 1623929139}
   - component: {fileID: 1623929140}
+  - component: {fileID: 1623929141}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2919,7 +2938,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  scoreText: {fileID: 1623694215}
+  coinCounter: {fileID: 1165002142}
+--- !u!114 &1623929141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623929137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0d3a4cb54c9f604d93b0072bb5cb172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current: {fileID: 1621767116}
+  toUpdate: {fileID: 1356052255}
+  coinTextContainer: {fileID: 806430190}
+  duration: 0.4
+  animationCurve: 0
 --- !u!1 &1653043979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3000,7 +3036,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 049a4ccb0e488464093d4ac2d11bda84, type: 3}
+  m_Sprite: {fileID: 2047857569, guid: 049a4ccb0e488464093d4ac2d11bda84, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3170,7 +3206,7 @@ GameObject:
   - component: {fileID: 1822454361}
   m_Layer: 6
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
