@@ -408,13 +408,25 @@ MonoBehaviour:
   m_FillRect: {fileID: 2010206104}
   m_HandleRect: {fileID: 802269144}
   m_Direction: 0
-  m_MinValue: 5
-  m_MaxValue: 15
+  m_MinValue: 0
+  m_MaxValue: 50
   m_WholeNumbers: 0
-  m_Value: 10
+  m_Value: 25
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 511674247}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: UpdatePlayerMaxSpeed
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &202562172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,7 +1344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputManager: {fileID: 1623929139}
-  maxSpeed: 25
+  maxSpeed: 40
   acceleration: 35
   jumpForce: 10
   dashForce: 40
@@ -3629,6 +3641,9 @@ MonoBehaviour:
   OnDash:
     m_PersistentCalls:
       m_Calls: []
+  OnSettingsMenu:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1623929140
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3643,6 +3658,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   coinCounter: {fileID: 1165002142}
+  inputManager: {fileID: 1623929139}
+  settingsMenu: {fileID: 565037780}
 --- !u!114 &1623929141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3659,7 +3676,7 @@ MonoBehaviour:
   toUpdate: {fileID: 1356052255}
   coinTextContainer: {fileID: 806430190}
   duration: 0.4
-  animationCurve: 0
+  animationCurve: 29
 --- !u!1 &1653043979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3977,7 +3994,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1816842607}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1623929140}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1816842607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4376,7 +4405,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
+  m_fontSizeMin: 30
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -4927,7 +4956,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2031089721}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1623929140}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: DisableSettingsMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2031089721
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -86,7 +86,6 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(reorientedDirection * acceleration * airControl);
         }
-
     }
 
     private void Jump()
@@ -111,5 +110,10 @@ public class PlayerController : MonoBehaviour
         isDashing = true;
         rb.linearVelocity = Vector3.zero;
         rb.AddForce(transform.forward * dashForce, ForceMode.Impulse);
+    }
+
+    public void UpdatePlayerMaxSpeed(float speed)
+    {
+        maxSpeed = speed;
     }
 }
