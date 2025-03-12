@@ -1,32 +1,28 @@
-# Third Person Platformer
+### **Project Tools**
 
-A simple third person character controller in Unity
+- This project is implemented through Unity and Visual Studio Code. Version control through Github.
 
-## Demo
 
-https://github.com/user-attachments/assets/91485280-b86b-4c82-ac11-2a5107730e94
+### **Project Description**
 
-## Cloning & Setting Up the Project
+This project optimizes the following contents on the basis of fork of project A3 provided by the professor:
+- Player operation tutorial board
+- Score updating mechanism
+- Game's settings page
+- Player's speed setting
 
-1. Ensure you have
-	- **Unity Hub** (Download: [Unity Hub](https://unity.com/download))
-	- **Unity Version** (6000.0.31f1)
-	- **Git** ([Download Git](https://git-scm.com/)) or **Github Desktop** ([Download Github Desktop](https://desktop.github.com/download/))
-2. Clone the project via [Git](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository?tool=cli) or [Github Desktop](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository?tool=desktop)
-3. Open **Unity Hub**
-4. Click **"Open"** and select the cloned project folder (with Assets, ProjectSettings, Packages)
 
-## Features
+### **Updated Instructions for Use**
 
-- Third Person Camera
-- Move around with WASD
-- Jump, Double Jump with Space
-- Dash with Shift
-- Collect Coins by moving over them
-- Score Counter on the top right
+- Set a clear game guide. There is a notice board on the platform to guide the player's activities: observing the surroundings, moving forward, backward, left, and right, jumping up, and dashing.
+- The score display panel is optimized. When the score is updated, it will be replaced according to the In Bound curve.
+- Added game control panel. The player can choose to continue the game, quit the game or adjust the moving speed when necessary.
 
-## Credits
 
-Uses coin model from [Quaternius](https://quaternius.com/) (Sourced from [Poly Pizza](https://poly.pizza/m/QHZtj94fvh))
+### **Assets**
 
+Provided by the guidance file.
+
+
+### **Demo Video**
 
