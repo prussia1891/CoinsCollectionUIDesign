@@ -26,3 +26,7 @@ Provided by the guidance file.
 
 ### **Demo Video**
 
+The video was recorded by another device because the screen recording software mistakenly captured the keyboard input.
+
+https://github.com/user-attachments/assets/dd8b5b80-eae4-4227-9a01-35b64853a5ea
+
